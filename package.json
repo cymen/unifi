@@ -1,0 +1,28 @@
+{
+    "name": "unifi",
+    "description": "access unifi networking equipment for reboot, etc"
+    "version": "0.0.1",
+    "bin": {
+      "unifi": "unifi.js"
+    },
+    "license": "MIT",
+    "main": "lib/unifi.js",
+    "engines": {
+        "node": ">=0.6"
+    },
+    "dependencies": {
+      "promise": "latest",
+      "underscore": "latest"
+    },
+    "devDependencies": {
+      "jasmine-node": "latest",
+      "nock": "latest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cymen/unifi-node"
+    },
+    "scripts": {
+        "test": "jasmine-node --forceexit spec"
+    }
+}
