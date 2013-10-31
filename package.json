@@ -20,7 +20,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/cymen/unifi-node"
+        "url": "https://github.com/cymen/unifi"
     },
     "scripts": {
         "test": "jasmine-node --forceexit spec"
