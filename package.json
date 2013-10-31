@@ -1,7 +1,7 @@
 {
     "name": "unifi",
     "description": "access unifi networking equipment for reboot, etc",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "bin": {
       "unifi": "unifi.js"
     },
