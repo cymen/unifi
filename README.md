@@ -4,6 +4,10 @@
 
 `unifi` is an implementation of the Unifi API for node. The Unifi API is used to access Unifi networking equipment. The plan is to implement the equivalent of the unfi-api Python version. Currently, only the ability to login (and get the cookie for the session) and reboot are present.
 
+## Warning
+
+The example below is using commands directly. The plan is to go to a more chained approach which should be less verbose and have less duplication. There may be some changes that break things although I would like to keep each command isolated as they are now so that those that want to use them directly can do so.
+
 ## Example
 
 Our program is going to tell the Unifi controller to reboot a specific access point identified by MAC address. Note the host, port, username and password are for connecting to the Unifi controller not the device.
