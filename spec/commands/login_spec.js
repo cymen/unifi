@@ -12,8 +12,8 @@ describe('login', function() {
         'set-cookie': cookie
       });
 
-    var unifi = require('../lib/login.js');
-    var promise = unifi(host, port, 'username', 'password');
+    var login = require('../../lib/commands/login.js');
+    var promise = login(host, port, 'username', 'password');
     promise.done(function(result) {
       expect(result).toEqual(cookie);
       done();
@@ -25,8 +25,8 @@ describe('login', function() {
       .post('/login')
       .reply(500);
 
-    var unifi = require('../lib/login.js');
-    var promise = unifi(host, port, 'username', 'password');
+    var login = require('../../lib/commands/login.js');
+    var promise = login(host, port, 'username', 'password');
     promise.done(function() {}, function(result) {
       expect(result).toContain('error');
       done();

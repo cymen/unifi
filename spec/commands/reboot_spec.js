@@ -11,7 +11,7 @@ describe('reboot', function() {
       .post('/api/cmd/devmgr')
       .reply(200, 'OK');
 
-    var reboot = require('../lib/reboot.js');
+    var reboot = require('../../lib/commands/reboot.js');
     reboot(host, port, cookie, mac)
       .done(function(result) {
         expect(result).toEqual('OK');
@@ -24,7 +24,7 @@ describe('reboot', function() {
       .post('/api/cmd/devmgr')
       .reply(500);
 
-    var reboot = require('../lib/reboot.js');
+    var reboot = require('../../lib/commands/reboot.js');
     reboot(host, port, cookie, mac)
       .done(function() {}, function(result) {
         expect(result).toContain('error');

@@ -1,5 +1,5 @@
-var login = require('./lib/login'),
-    reboot = require('./lib/reboot');
+var login = require('./lib/commands/login'),
+    reboot = require('./lib/commands/reboot');
 
 var host = '10.0.1.1',
     port = '8443',

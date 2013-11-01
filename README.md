@@ -8,8 +8,8 @@
 
 Our program is going to tell the Unifi controller to reboot a specific access point identified by MAC address. Note the host, port, username and password are for connecting to the Unifi controller not the device.
 
-    var login = require('./lib/login'),
-        reboot = require('./lib/reboot');
+    var login = require('./lib/commands/login'),
+        reboot = require('./lib/commands/reboot');
 
     var host = '10.0.1.1',
         port = '8443',
