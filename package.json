@@ -1,11 +1,14 @@
 {
     "name": "unifi",
     "description": "access unifi networking equipment for reboot, etc",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "bin": {
       "unifi": "unifi.js"
     },
-    "license": "MIT",
+    "licenses": [{
+      "type": "MIT",
+      "url": "https://github.com/cymen/unifi/blob/master/LICENSE"
+    }],
     "main": "lib/unifi.js",
     "engines": {
         "node": ">=0.6"
