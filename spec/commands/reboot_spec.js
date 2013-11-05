@@ -3,18 +3,17 @@ describe('reboot', function() {
       host = 'localhost',
       mac = '00:27:22:fc:b0:73',
       nock = require('nock'),
-      port = 8000,
-      server;
+      port = 8000;
 
   it('sends a reboot request', function(done) {
     nock('https://' + host + ':' + port)
       .post('/api/cmd/devmgr')
-      .reply(200, 'OK');
+      .reply(200, JSON.stringify({ "data" : [] , "meta" : { "rc" : "ok"}}));
 
     var reboot = require('../../lib/commands/reboot.js');
     reboot(host, port, cookie, mac)
       .done(function(result) {
-        expect(result).toEqual('OK');
+        expect(result).toEqual([]);
         done();
       });
   });

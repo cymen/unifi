@@ -2,8 +2,7 @@ describe('login', function() {
   var cookie = 'abc123',
       host = 'localhost',
       nock = require('nock'),
-      port = 8000,
-      server;
+      port = 8000;
 
   it('returns session cookie', function(done) {
     nock('https://' + host + ':' + port)

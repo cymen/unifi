@@ -1,7 +1,7 @@
 {
     "name": "unifi",
     "description": "access unifi networking equipment for reboot, etc",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "bin": {
       "unifi": "unifi.js"
     },
@@ -26,6 +26,6 @@
         "url": "https://github.com/cymen/unifi"
     },
     "scripts": {
-        "test": "jasmine-node --forceexit spec"
+        "test": "jasmine-node --forceexit spec/"
     }
 }
