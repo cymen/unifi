@@ -15,22 +15,20 @@ The example below is using commands directly. The plan is to go to a more chaine
 Our program is going to ask the Unifi controller for all of the devices it knows about. Note the host, port, username and password are for connecting to the Unifi controller not the device.
 
     var login = require('./lib/commands/login'),
-        device = require('./lib/status/device'),
-        reboot = require('./lib/commands/reboot'),
-        _ = require('underscore')._;
+        device = require('./lib/status/device');
 
     var host = '10.0.1.1',
         port = '8443',
-        username = 'administrator',
-        password = 'password';
+        username = 'admin',
+        password = 'aflite';
 
     login(host, port, username, password)
       .then(function(cookie) {
         return device(host, port, cookie);
       })
       .then(function(devices) {
-        _.each(Object.keys(devices), function(key) {
-          console.log(devices[key].mac);
+        devices.forEach(function(ap) {
+          console.log(ap.mac);
         });
       });
 
@@ -68,4 +66,4 @@ Our program is going to tell the Unifi controller to reboot a specific access po
 And running it:
 
     $ node example.js
-    reboot returned: {"0":"{ \"data\" : [  null ] , \"meta\" : { \"rc\" : \"ok\"}}"}
+    reboot returned: {"0":[null]}
